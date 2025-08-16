@@ -16,8 +16,20 @@ def odd_numbers_up_to(n):
         odds.append(i)
     return odds
 
-def first_odds_numbers(n):
+def first_odd_numbers(n):
     first_odds=[]
     for i in range(0,n):
         first_odds.append(i*2+1)
+    return first_odds
+
+def even_numbers_up_to(n):
+    odds=[]
+    for i in range(0,n,2):
+        odds.append(i)
+    return odds
+
+def first_even_numbers(n):
+    first_odds=[]
+    for i in range(0,n):
+        first_odds.append(i*2)
     return first_odds
