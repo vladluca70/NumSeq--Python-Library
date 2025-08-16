@@ -290,3 +290,38 @@ def first_padovan_numbers(n):
     for i in range(3,n):
         first_padovan_nbrs.append(first_padovan_nbrs[i-2]+first_padovan_nbrs[i-3])
     return first_padovan_nbrs
+
+def perrin_numbers_up_to(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    if n==0 :
+        raise ValueError("the number must be greater than 0")
+    perrin_nbrs=[3,0,2]
+    contor=3
+    while True:
+        new_number=perrin_nbrs[contor-2]+perrin_nbrs[contor-3]
+        if new_number<=n:
+            perrin_nbrs.append(new_number)
+            contor+=1
+        else:
+            break
+    return perrin_nbrs
+
+def first_perrin_numbers(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    first_perrin_nbrs=[]
+    if n==0:
+        return first_perrin_nbrs
+    first_perrin_nbrs.append(3)
+    if n==1:
+        return first_perrin_nbrs
+    first_perrin_nbrs.append(0)
+    if n==2:
+        return first_perrin_nbrs
+    first_perrin_nbrs.append(2)
+    if n==3:
+        return first_perrin_nbrs
+    for i in range(3,n):
+        first_perrin_nbrs.append(first_perrin_nbrs[i-2]+first_perrin_nbrs[i-3])
+    return first_perrin_nbrs

@@ -24,3 +24,5 @@ from .core import factorial_numbers_up_to
 from .core import first_factorial_numbers
 from .core import padovan_numbers_up_to
 from .core import first_padovan_numbers
+from .core import perrin_numbers_up_to
+from .core import first_perrin_numbers

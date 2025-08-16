@@ -26,4 +26,5 @@ print(factorial_numbers_up_to(500))
 print(first_factorial_numbers(10))
 print(padovan_numbers_up_to(11))
 print(first_padovan_numbers(10))
-
+print(perrin_numbers_up_to(20))
+print(first_perrin_numbers(10))
