@@ -1,0 +1,8 @@
+README.md
+setup.py
+numseq/__init__.py
+numseq/core.py
+numseq.egg-info/PKG-INFO
+numseq.egg-info/SOURCES.txt
+numseq.egg-info/dependency_links.txt
+numseq.egg-info/top_level.txt
