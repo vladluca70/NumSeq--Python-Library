@@ -263,7 +263,7 @@ first_lucas_numbers(7)  # returns [2, 1, 3, 4, 7, 11, 18]
 - **Catalan numbers formula:**  
 
 $$
-C_n = \frac{(2n)!}{(n+1)! \. n!}, \quad n \ge 0
+C_n = \frac{(2n)!}{(n+1)! * n!}, \quad n \ge 0
 $$
 
 - **Example:**  
@@ -280,7 +280,7 @@ catalan_numbers_up_to(20)  # returns [1, 1, 2, 5, 14]
 - **Catalan numbers formula:**  
 
 $$
-C_n = \frac{(2n)!}{(n+1)! \. n!}, \quad n \ge 0
+C_n = \frac{(2n)!}{(n+1)! * n!}, \quad n \ge 0
 $$
 
 - **Example:**  
