@@ -453,3 +453,30 @@ def collatz_sequence(n):
             n = 3 * n + 1
         seq.append(n)
     return seq
+
+def harshad_numbers_up_to(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    if n == 0:
+        raise ValueError("the number must be greater than 0")
+
+    harshad_nbrs = []
+    for num in range(1, n+1):
+        digit_sum = sum(int(d) for d in str(num))
+        if num % digit_sum == 0:
+            harshad_nbrs.append(num)
+    return harshad_nbrs
+
+
+def first_harshad_numbers(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    harshad_nbrs = []
+    num = 1
+    while len(harshad_nbrs) < n:
+        digit_sum = sum(int(d) for d in str(num))
+        if num % digit_sum == 0:
+            harshad_nbrs.append(num)
+        num += 1
+    return harshad_nbrs
+
