@@ -316,6 +316,40 @@ $$
 first_factorial_numbers(7)  # returns [1, 1, 2, 6, 24, 120, 720]
 ```
 
+### 25.`padovan_numbers_up_to(n)` 🔢  
+- **Description:** Returns all Padovan numbers less than or equal to `n`.  
+- **Parameter:**  
+  - `n` (int) – the maximum value for Padovan numbers. Must be a positive number greater than 0.  
+- **Returns:**  
+  - List of Padovan numbers `[1, 1, 1, 2, 2, 3, 4, 5, 7, ...]` up to `n`.  
+- **Padovan numbers formula (recurrence relation):**  
+
+$$
+P(n) = P(n-2) + P(n-3), \quad P(0)=P(1)=P(2)=1, \quad n \ge 0
+$$
+
+- **Example:**  
+```python
+padovan_numbers_up_to(10)  # returns [1, 1, 1, 2, 2, 3, 4, 5, 7, 9]
+```
+
+### 26.`first_padovan_numbers(n)` 🔢  
+- **Description:** Returns the first `n` Padovan numbers.  
+- **Parameter:**  
+  - `n` (int) – the number of Padovan numbers to generate. Must be a positive number.  
+- **Returns:**  
+  - List of the first `n` Padovan numbers `[1, 1, 1, 2, 2, 3, 4, 5, 7, ...]`.  
+- **Padovan numbers formula (recurrence relation):**  
+
+$$
+P(n) = P(n-2) + P(n-3), \quad P(0)=P(1)=P(2)=1, \quad n \ge 0
+$$
+
+- **Example:**  
+```python
+first_padovan_numbers(10)  # returns [1, 1, 1, 2, 2, 3, 4, 5, 7, 9]
+```
+
 ---
 
 Enjoy generating number sequences with **NumSeq**! 🎉  
