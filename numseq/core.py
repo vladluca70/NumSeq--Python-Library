@@ -1,5 +1,8 @@
 import math
 
+from sympy.concrete.guess import find_simple_recurrence
+
+
 def naturals0(n):
     first_n_naturals=[]
     for i in range(n+1):
@@ -100,3 +103,36 @@ def first_tetrahedral_numbers(n):
         first_tetr_numbers.append(int(i*(i+1)*(i+2)/6))
     return first_tetr_numbers
 
+def isPrime(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+
+    max_div = int(math.sqrt(n)) + 1
+    for i in range(5, max_div, 6):
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+    return True
+
+def prime_numbers_up_to(n):
+    if n<0:
+        raise "the number must be positive"
+    prime_numbers=[]
+    for i in range(1,n+1):
+        if isPrime(i):
+            prime_numbers.append(i)
+    return prime_numbers
+
+def first_prime_numbers(n):
+    first_prime_nbrs=[]
+    contor=1
+    start=2
+    while contor<=n:
+        if isPrime(start):
+            first_prime_nbrs.append(start)
+            contor=contor+1
+        start=start+1
+    return first_prime_nbrs
