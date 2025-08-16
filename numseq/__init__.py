@@ -14,3 +14,5 @@ from .core import tetrahedral_numbers_up_to
 from .core import first_tetrahedral_numbers
 from .core import prime_numbers_up_to
 from .core import first_prime_numbers
+from  .core import fibonacci_numbers_up_to
+from  .core import first_fibonacci_numbers

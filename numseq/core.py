@@ -163,3 +163,24 @@ def first_prime_numbers(n):
             contor=contor+1
         start=start+1
     return first_prime_nbrs
+
+def fibonacci_numbers_up_to(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    fib_numbers = [0, 1]
+    while True:
+        next_fib = fib_numbers[-1] + fib_numbers[-2]
+        if next_fib > n:
+            break
+        fib_numbers.append(next_fib)
+    return fib_numbers
+
+
+def first_fibonacci_numbers(n):
+    if n < 2:
+        raise ValueError("the number must be greater than 1")
+    fib_numbers = [0, 1]
+    for _ in range(n - 2):
+        next_fib = fib_numbers[-1] + fib_numbers[-2]
+        fib_numbers.append(next_fib)
+    return fib_numbers
