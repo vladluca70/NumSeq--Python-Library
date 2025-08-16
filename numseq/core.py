@@ -415,3 +415,28 @@ def first_armstrong_numbers(n):
         num += 1
     return armstrong_nbrs
 
+def perfect_numbers_up_to(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    if n == 0:
+        raise ValueError("the number must be greater than 0")
+
+    perfect_nbrs = []
+    for num in range(2, n+1):
+        divisors_sum = sum(d for d in range(1, num//2 + 1) if num % d == 0)
+        if divisors_sum == num:
+            perfect_nbrs.append(num)
+    return perfect_nbrs
+
+
+def first_perfect_numbers(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    perfect_nbrs = []
+    num = 2
+    while len(perfect_nbrs) < n:
+        divisors_sum = sum(d for d in range(1, num//2 + 1) if num % d == 0)
+        if divisors_sum == num:
+            perfect_nbrs.append(num)
+        num += 1
+    return perfect_nbrs
