@@ -24,3 +24,6 @@ print(catalan_numbers_up_to(100))
 print(first_catalan_numbers(10))
 print(factorial_numbers_up_to(500))
 print(first_factorial_numbers(10))
+print(padovan_numbers_up_to(11))
+print(first_padovan_numbers(10))
+

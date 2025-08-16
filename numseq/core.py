@@ -255,3 +255,38 @@ def first_factorial_numbers(n):
     for i in range(n-1):
         first_fact_numbers.append(first_fact_numbers[i]*(i+1))
     return first_fact_numbers
+
+def padovan_numbers_up_to(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    if n==0 :
+        raise ValueError("the number must be greater than 0")
+    padovan_nbrs=[1,1,1]
+    contor=3
+    while True:
+        new_number=padovan_nbrs[contor-2]+padovan_nbrs[contor-3]
+        if new_number<=n:
+            padovan_nbrs.append(new_number)
+            contor+=1
+        else:
+            break
+    return padovan_nbrs
+
+def first_padovan_numbers(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    first_padovan_nbrs=[]
+    if n==0:
+        return first_padovan_nbrs
+    first_padovan_nbrs.append(1)
+    if n==1:
+        return first_padovan_nbrs
+    first_padovan_nbrs.append(1)
+    if n==2:
+        return first_padovan_nbrs
+    first_padovan_nbrs.append(1)
+    if n==3:
+        return first_padovan_nbrs
+    for i in range(3,n):
+        first_padovan_nbrs.append(first_padovan_nbrs[i-2]+first_padovan_nbrs[i-3])
+    return first_padovan_nbrs

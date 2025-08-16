@@ -22,3 +22,5 @@ from .core import catalan_numbers_up_to
 from  .core import first_catalan_numbers
 from .core import factorial_numbers_up_to
 from .core import first_factorial_numbers
+from .core import padovan_numbers_up_to
+from .core import first_padovan_numbers
