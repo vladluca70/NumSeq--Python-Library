@@ -193,8 +193,12 @@ first_prime_numbers(5)  # returns [2, 3, 5, 7, 11]
   - `n` (int) – the upper limit for generating Fibonacci numbers. Must be a positive number.  
 - **Returns:**  
   - List of Fibonacci numbers `[0, 1, 1, 2, 3, 5, 8, ..., ≤ n]`.  
-- **Formula:**  
-  - \( F_0 = 0, \; F_1 = 1, \; F_n = F_{n-1} + F_{n-2} \text{ for } n \ge 2 \)  
+- **Fibonacci numbers formula:**  
+
+$$
+F_0 = 0, \quad F_1 = 1, \quad F_n = F_{n-1} + F_{n-2}, \quad n \ge 2
+$$
+
 - **Example:**  
 ```python
 fibonacci_numbers_up_to(10)  # returns [0, 1, 1, 2, 3, 5, 8]
@@ -206,8 +210,12 @@ fibonacci_numbers_up_to(10)  # returns [0, 1, 1, 2, 3, 5, 8]
   - `n` (int) – the number of Fibonacci numbers to generate. Must be greater than 1.  
 - **Returns:**  
   - List of the first `n` Fibonacci numbers `[0, 1, 1, 2, 3, 5, ...]`.  
-- **Formula:**  
-  - \( F_0 = 0, \; F_1 = 1, \; F_n = F_{n-1} + F_{n-2} \text{ for } n \ge 2 \)  
+- **Fibonacci numbers formula:**  
+
+$$
+F_0 = 0, \quad F_1 = 1, \quad F_n = F_{n-1} + F_{n-2}, \quad n \ge 2
+$$
+
 - **Example:**  
 ```python
 first_fibonacci_numbers(7)  # returns [0, 1, 1, 2, 3, 5, 8]
