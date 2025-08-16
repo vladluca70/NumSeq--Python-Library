@@ -61,3 +61,22 @@ def first_perfect_cube_numbers(n):
     for i in range(n):
         first_perf_cube_numbers.append(i**3)
     return first_perf_cube_numbers
+
+def triangular_numbers_up_to(n):
+    triang_numbers=[]
+    ok=1
+    start=1
+    while ok==1:
+        triang_number=int(start*(start+1)/2)
+        if triang_number>n:
+            ok=0
+        else:
+            start=start+1
+            triang_numbers.append(triang_number)
+    return triang_numbers
+
+def first_triangular_numbers(n):
+    first_triang_numbers=[]
+    for i in range(1, n+1):
+        first_triang_numbers.append(int(i*(i+1)/2))
+    return first_triang_numbers
