@@ -221,6 +221,73 @@ $$
 first_fibonacci_numbers(7)  # returns [0, 1, 1, 2, 3, 5, 8]
 ```
 
+### 19. `lucas_numbers_up_to(n)` 🌟  
+- **Description:** Returns all Lucas numbers less than or equal to `n`.  
+- **Parameter:**  
+  - `n` (int) – the upper limit for generating Lucas numbers. Must be a positive number.  
+- **Returns:**  
+  - List of Lucas numbers `[2, 1, 3, 4, 7, 11, 18, ..., ≤ n]`.  
+- **Lucas numbers formula:**  
+
+$$
+L_0 = 2, \quad L_1 = 1, \quad L_n = L_{n-1} + L_{n-2}, \quad n \ge 2
+$$
+
+- **Example:**  
+```python
+lucas_numbers_up_to(20)  # returns [2, 1, 3, 4, 7, 11, 18]
+```
+
+### 20. `first_lucas_numbers(n)` 🔢  
+- **Description:** Returns the first `n` Lucas numbers.  
+- **Parameter:**  
+  - `n` (int) – the number of Lucas numbers to generate. Must be greater than 1.  
+- **Returns:**  
+  - List of the first `n` Lucas numbers `[2, 1, 3, 4, 7, 11, ...]`.  
+- **Lucas numbers formula:**  
+
+$$
+L_0 = 2, \quad L_1 = 1, \quad L_n = L_{n-1} + L_{n-2}, \quad n \ge 2
+$$
+
+- **Example:**  
+```python
+first_lucas_numbers(7)  # returns [2, 1, 3, 4, 7, 11, 18]
+```
+### 21. `catalan_numbers_up_to(n)` 🧮  
+- **Description:** Returns all Catalan numbers less than or equal to `n`.  
+- **Parameter:**  
+  - `n` (int) – the upper limit for generating Catalan numbers. Must be a positive number.  
+- **Returns:**  
+  - List of Catalan numbers `[1, 1, 2, 5, 14, 42, ..., ≤ n]`.  
+- **Catalan numbers formula:**  
+
+$$
+C_n = \frac{(2n)!}{(n+1)! \, n!}, \quad n \ge 0
+$$
+
+- **Example:**  
+```python
+catalan_numbers_up_to(20)  # returns [1, 1, 2, 5, 14]
+```
+
+### 22. `first_catalan_numbers(n)` 🔢  
+- **Description:** Returns the first `n` Catalan numbers.  
+- **Parameter:**  
+  - `n` (int) – the number of Catalan numbers to generate. Must be a positive number.  
+- **Returns:**  
+  - List of the first `n` Catalan numbers `[1, 1, 2, 5, 14, ...]`.  
+- **Catalan numbers formula:**  
+
+$$
+C_n = \frac{(2n)!}{(n+1)! \, n!}, \quad n \ge 0
+$$
+
+- **Example:**  
+```python
+first_catalan_numbers(7)  # returns [1, 1, 2, 5, 14, 42, 132]
+```
+
 ---
 
 Enjoy generating number sequences with **NumSeq**! 🎉  
