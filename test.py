@@ -43,8 +43,13 @@ from numseq import *
 # print(first_hamming_numbers(4))
 # print(mersenne_numbers_up_to(9000))
 # print(first_mersenne_numbers(3))
+# print(fermat_numbers_up_to(70000))
+# print(first_fermat_numbers(3))
+# print(pell_numbers_up_to(200))
+# print(first_pell_numbers(5))
 
-print(fermat_numbers_up_to(70000))
-print(first_fermat_numbers(3))
-print(pell_numbers_up_to(200))
-print(first_pell_numbers(5))
+seq1=[1,2,3,4,5]
+seq2=[2,3,4,1,0]
+print(length_of_sequence(seq1))
+print(add_sequences(seq1, seq2))
+print(concat_sequences(seq1, seq2))

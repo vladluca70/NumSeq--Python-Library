@@ -1,5 +1,9 @@
 import math
 
+from PIL.ImageOps import expand
+from sympy.physics.units import length
+
+
 def naturals0(n):
     if n<0:
         raise ValueError("the number must be positive")
@@ -616,3 +620,107 @@ def first_pell_numbers(count):
         pell_nbrs.append(2 * pell_nbrs[-1] + pell_nbrs[-2])
 
     return pell_nbrs[:count]
+
+def length_of_sequence(seq):
+    lg=0
+    for i in seq:
+        lg+=1
+    return lg
+
+def add_sequences(seq1, seq2):
+    lg1=length_of_sequence(seq1)
+    lg2=length_of_sequence(seq2)
+    if lg1!=lg2:
+        raise ValueError("length of sequences must be the same")
+    s=[]
+    for i in range(lg1):
+        s.append(seq1[i]+seq2[i])
+    return s
+
+def subtract_sequences(seq1, seq2):
+    lg1=length_of_sequence(seq1)
+    lg2=length_of_sequence(seq2)
+    if lg1!=lg2:
+        raise ValueError("length of sequences must be the same")
+    s=[]
+    for i in range(lg1):
+        s.append(seq1[i]-seq2[i])
+    return s
+
+def multiply_sequences(seq1, seq2):
+    lg1=length_of_sequence(seq1)
+    lg2=length_of_sequence(seq2)
+    if lg1!=lg2:
+        raise ValueError("length of sequences must be the same")
+    m=[]
+    for i in range(lg1):
+        m.append(seq1[i]*seq2[i])
+    return m
+
+def divide_sequences(seq1, seq2):
+    lg1=length_of_sequence(seq1)
+    lg2=length_of_sequence(seq2)
+    if lg1!=lg2:
+        raise ValueError("length of sequences must be the same")
+    d=[]
+    for i in range(lg1):
+        d.append(seq1[i]/seq2[i])
+    return d
+
+def concat_sequences(seq1, seq2):
+    return seq1+seq2
+
+def logic_AND_on_sequences(seq1, seq2):
+    lg1=length_of_sequence(seq1)
+    lg2=length_of_sequence(seq2)
+    if lg1!=lg2:
+        raise ValueError("length of sequences must be the same")
+    for i in range(lg1):
+        if seq1[i]==0 or seq1[i]==1:
+            if seq2[i]==0 or seq2[i]==1:
+                pass
+            else:
+                raise ValueError("all values must be boolean")
+    _and=[]
+    for i in range(lg1):
+        _and.append(seq1[i] and seq2[i])
+    return _and
+
+def logic_OR_on_sequences(seq1, seq2):
+    lg1=length_of_sequence(seq1)
+    lg2=length_of_sequence(seq2)
+    if lg1!=lg2:
+        raise ValueError("length of sequences must be the same")
+    for i in range(lg1):
+        if seq1[i]==0 or seq1[i]==1:
+            if seq2[i]==0 or seq2[i]==1:
+                pass
+            else:
+                raise ValueError("all values must be boolean")
+    _or=[]
+    for i in range(lg1):
+        _or.append(seq1[i] or seq2[i])
+    return _or
+
+def logic_XOR_on_sequences(seq1, seq2):
+    lg1=length_of_sequence(seq1)
+    lg2=length_of_sequence(seq2)
+    if lg1!=lg2:
+        raise ValueError("length of sequences must be the same")
+    for i in range(lg1):
+        if seq1[i]==0 or seq1[i]==1:
+            if seq2[i]==0 or seq2[i]==1:
+                pass
+            else:
+                raise ValueError("all values must be boolean")
+    _xor=[]
+    for i in range(lg1):
+        _xor.append(seq1[i] != seq2[i])
+    return _xor
+
+def max_from_sequence(seq):
+    return max(seq)
+
+def min_from_sequence(seq):
+    return min(seq)
+
