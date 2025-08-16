@@ -48,3 +48,16 @@ def first_perfect_square_numbers(n):
     for i in range(n):
         first_perfect_sqrt_numbers.append(i*i)
     return first_perfect_sqrt_numbers
+
+def perfect_cubes_up_to(n):
+    perfect_cubes=[]
+    last=int(math.cbrt(n))
+    for i in range (last+1):
+        perfect_cubes.append(i**3)
+    return perfect_cubes
+
+def first_perfect_cube_numbers(n):
+    first_perf_cube_numbers=[]
+    for i in range(n):
+        first_perf_cube_numbers.append(i**3)
+    return first_perf_cube_numbers
