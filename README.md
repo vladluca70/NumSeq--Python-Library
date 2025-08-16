@@ -51,6 +51,96 @@ odd_numbers_up_to(10)  # returns [1, 3, 5, 7, 9]
 first_odd_numbers(5)  # returns [1, 3, 5, 7, 9]
 ```
 
+### 5. `even_numbers_up_to(n)` ⚡  
+- **Description:** Returns all even numbers from 0 up to `n` (exclusive).  
+- **Parameter:**  
+  - `n` (int) – the upper limit for generating even numbers. Must be a positive number.  
+- **Returns:**  
+  - List of even numbers `[0, 2, 4, ..., < n]`.  
+- **Example:**  
+```python
+even_numbers_up_to(10)  # returns [0, 2, 4, 6, 8]
+```
+
+### 6. `first_even_numbers(n)` 💧  
+- **Description:** Returns the first `n` even numbers starting from 0.  
+- **Parameter:**  
+  - `n` (int) – the number of even numbers to generate. Must be a positive number.  
+- **Returns:**  
+  - List of the first `n` even numbers `[0, 2, 4, ..., 2*(n-1)]`.  
+- **Example:**  
+```python
+first_even_numbers(5)  # returns [0, 2, 4, 6, 8]
+```
+
+### 7. `perfect_squares_up_to(n)` 🔲  
+- **Description:** Returns all perfect square numbers less than or equal to `n`.  
+- **Parameter:**  
+  - `n` (int) – the upper limit for generating perfect squares. Must be a positive number.  
+- **Returns:**  
+  - List of perfect squares `[0, 1, 4, 9, ..., ≤ n]`.  
+- **Example:**  
+```python
+perfect_squares_up_to(10)  # returns [0, 1, 4, 9]
+```
+
+### 8. `first_perfect_square_numbers(n)` ✨  
+- **Description:** Returns the first `n` perfect square numbers starting from 0.  
+- **Parameter:**  
+  - `n` (int) – the number of perfect squares to generate. Must be a positive number.  
+- **Returns:**  
+  - List of the first `n` perfect squares `[0, 1, 4, 9, ..., (n-1)^2]`.  
+- **Example:**  
+```python
+first_perfect_square_numbers(5)  # returns [0, 1, 4, 9, 16]
+```
+
+### 9. `perfect_cubes_up_to(n)` 🟫  
+- **Description:** Returns all perfect cube numbers less than or equal to `n`.  
+- **Parameter:**  
+  - `n` (int) – the upper limit for generating perfect cubes. Must be a positive number.  
+- **Returns:**  
+  - List of perfect cubes `[0, 1, 8, 27, ..., ≤ n]`.  
+- **Example:**  
+```python
+perfect_cubes_up_to(30)  # returns [0, 1, 8, 27]
+```
+
+### 10. `first_perfect_cube_numbers(n)` 🔹  
+- **Description:** Returns the first `n` perfect cube numbers starting from 0.  
+- **Parameter:**  
+  - `n` (int) – the number of perfect cubes to generate. Must be a positive number.  
+- **Returns:**  
+  - List of the first `n` perfect cubes `[0, 1, 8, 27, ..., (n-1)^3]`.  
+- **Example:**  
+```python
+first_perfect_cube_numbers(5)  # returns [0, 1, 8, 27, 64]
+```
+
+### 11. `triangular_numbers_up_to(n)` 🔺  
+- **Description:** Returns all triangular numbers less than or equal to `n`.  
+- **Formula:** `T_k = k * (k + 1) / 2`, where `T_k` is the k-th triangular number.  
+- **Parameter:**  
+  - `n` (int) – the upper limit for generating triangular numbers. Must be a positive number.  
+- **Returns:**  
+  - List of triangular numbers `[1, 3, 6, 10, ..., ≤ n]`.  
+- **Example:**  
+```python
+triangular_numbers_up_to(15)  # returns [1, 3, 6, 10, 15]
+```
+
+### 12. `first_triangular_numbers(n)` 🔹  
+- **Description:** Returns the first `n` triangular numbers starting from 1.  
+- **Formula:** `T_k = k * (k + 1) / 2`  
+- **Parameter:**  
+  - `n` (int) – the number of triangular numbers to generate. Must be a positive number.  
+- **Returns:**  
+  - List of the first `n` triangular numbers `[1, 3, 6, 10, ..., T_n]`.  
+- **Example:**  
+```python
+first_triangular_numbers(5)  # returns [1, 3, 6, 10, 15]
+```
+
 ---
 
 Enjoy generating number sequences with **NumSeq**! 🎉  
