@@ -388,3 +388,30 @@ def first_tribonacci_numbers(n):
     for i in range(3, n):
         trib_nbrs.append(trib_nbrs[i-1] + trib_nbrs[i-2] + trib_nbrs[i-3])
     return trib_nbrs
+
+def armstrong_numbers_up_to(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    if n == 0:
+        raise ValueError("the number must be greater than 0")
+
+    armstrong_nbrs = []
+    for num in range(1, n+1):
+        power = len(str(num))
+        if num == sum(int(digit) ** power for digit in str(num)):
+            armstrong_nbrs.append(num)
+    return armstrong_nbrs
+
+
+def first_armstrong_numbers(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    armstrong_nbrs = []
+    num = 1
+    while len(armstrong_nbrs) < n:
+        power = len(str(num))
+        if num == sum(int(digit) ** power for digit in str(num)):
+            armstrong_nbrs.append(num)
+        num += 1
+    return armstrong_nbrs
+
