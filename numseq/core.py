@@ -325,3 +325,33 @@ def first_perrin_numbers(n):
     for i in range(3,n):
         first_perrin_nbrs.append(first_perrin_nbrs[i-2]+first_perrin_nbrs[i-3])
     return first_perrin_nbrs
+
+def motzkin_numbers_up_to(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    if n == 0:
+        raise ValueError("the number must be greater than 0")
+
+    motzkin_nbrs = [1, 1]
+    i = 2
+    while True:
+        next_val = motzkin_nbrs[i-1] + sum(motzkin_nbrs[k] * motzkin_nbrs[i-2-k] for k in range(i-1))
+        if next_val <= n:
+            motzkin_nbrs.append(next_val)
+            i += 1
+        else:
+            break
+    return motzkin_nbrs
+
+
+def first_motzkin_numbers(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    if n == 0:
+        return []
+    if n == 1:
+        return [1]
+    motzkin_nbrs = [1, 1]
+    for i in range(2, n):
+        motzkin_nbrs.append(motzkin_nbrs[i-1] + sum(motzkin_nbrs[k] * motzkin_nbrs[i-2-k] for k in range(i-1)))
+    return motzkin_nbrs
