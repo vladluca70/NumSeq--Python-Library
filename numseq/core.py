@@ -9,3 +9,15 @@ def naturals(n):
     for i in range(1,n+1):
         first_n_naturals.append(i)
     return first_n_naturals
+
+def odd_numbers_up_to(n):
+    odds=[]
+    for i in range(1,n+1,2):
+        odds.append(i)
+    return odds
+
+def first_odds_numbers(n):
+    first_odds=[]
+    for i in range(0,n):
+        first_odds.append(i*2+1)
+    return first_odds
