@@ -1,3 +1,5 @@
+import math
+
 def naturals0(n):
     first_n_naturals=[]
     for i in range(n+1):
@@ -33,3 +35,16 @@ def first_even_numbers(n):
     for i in range(0,n):
         first_odds.append(i*2)
     return first_odds
+
+def perfect_squares_up_to(n):
+    perfect_squares=[]
+    last=int(math.sqrt(n))
+    for i in range (last+1):
+        perfect_squares.append(i*i)
+    return perfect_squares
+
+def first_perfect_square_numbers(n):
+    first_perfect_sqrt_numbers=[]
+    for i in range(n):
+        first_perfect_sqrt_numbers.append(i*i)
+    return first_perfect_sqrt_numbers
