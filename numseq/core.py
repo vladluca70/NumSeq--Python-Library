@@ -229,3 +229,29 @@ def first_catalan_numbers(n):
         C=int((math.factorial(2*i)) / (math.factorial(i+1)*math.factorial(i)))
         first_catalan_nbrs.append(C)
     return first_catalan_nbrs
+
+def factorial_numbers_up_to(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    start=1
+    fact_numbers=[1]
+    while True:
+        nr=fact_numbers[start-1]*start
+        if nr<=n:
+            fact_numbers.append(nr)
+            start+=1
+        else:
+            break
+    return fact_numbers
+
+def first_factorial_numbers(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    first_fact_numbers=[]
+    if n==1:
+        first_fact_numbers.append(1)
+        return first_fact_numbers
+    first_fact_numbers.append(1)
+    for i in range(n-1):
+        first_fact_numbers.append(first_fact_numbers[i]*(i+1))
+    return first_fact_numbers
