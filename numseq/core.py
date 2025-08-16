@@ -520,7 +520,6 @@ def first_hamming_numbers(n):
     return hamming_nbrs
 
 def mersenne_numbers_up_to(n):
-    """Returnează toate numerele Mersenne mai mici sau egale cu n."""
     if n < 1:
         raise ValueError("Numărul trebuie să fie cel puțin 1")
 
@@ -546,7 +545,6 @@ def mersenne_numbers_up_to(n):
 
 
 def first_mersenne_numbers(count):
-    """Returnează primele 'count' numere Mersenne."""
     if count < 1:
         raise ValueError("Count trebuie să fie cel puțin 1")
 
@@ -566,3 +564,31 @@ def first_mersenne_numbers(count):
         p += 1
 
     return mersenne_nbrs
+
+def fermat_numbers_up_to(n):
+    if n < 1:
+        raise ValueError("Numărul trebuie să fie cel puțin 1")
+
+    fermat_nbrs = []
+    k = 0
+    while True:
+        f = 2**(2**k) + 1
+        if f > n:
+            break
+        fermat_nbrs.append(f)
+        k += 1
+
+    return fermat_nbrs
+
+
+def first_fermat_numbers(count):
+    if count < 1:
+        raise ValueError("Count trebuie să fie cel puțin 1")
+
+    fermat_nbrs = []
+    k = 0
+    while len(fermat_nbrs) < count:
+        fermat_nbrs.append(2**(2**k) + 1)
+        k += 1
+
+    return fermat_nbrs
