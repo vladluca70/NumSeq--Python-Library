@@ -10,3 +10,5 @@ from .core import perfect_cubes_up_to
 from .core import first_perfect_cube_numbers
 from .core import triangular_numbers_up_to
 from .core import first_triangular_numbers
+from .core import tetrahedral_numbers_up_to
+from .core import first_tetrahedral_numbers

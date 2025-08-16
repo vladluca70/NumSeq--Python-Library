@@ -80,3 +80,23 @@ def first_triangular_numbers(n):
     for i in range(1, n+1):
         first_triang_numbers.append(int(i*(i+1)/2))
     return first_triang_numbers
+
+def tetrahedral_numbers_up_to(n):
+    tetr_numbers=[]
+    ok=1
+    start=1
+    while ok==1:
+        tetr_number=int(start*(start+1)*(start+2)/6)
+        if tetr_number>n:
+            ok=0
+        else:
+            start=start+1
+            tetr_numbers.append(tetr_number)
+    return tetr_numbers
+
+def first_tetrahedral_numbers(n):
+    first_tetr_numbers=[]
+    for i in range(1,n+1):
+        first_tetr_numbers.append(int(i*(i+1)*(i+2)/6))
+    return first_tetr_numbers
+
