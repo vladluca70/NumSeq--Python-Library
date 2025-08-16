@@ -1,45 +1,56 @@
 import math
 
-from sympy.concrete.guess import find_simple_recurrence
-
-
 def naturals0(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     first_n_naturals=[]
     for i in range(n+1):
         first_n_naturals.append(i)
     return first_n_naturals
 
 def naturals(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     first_n_naturals=[]
     for i in range(1,n+1):
         first_n_naturals.append(i)
     return first_n_naturals
 
 def odd_numbers_up_to(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     odds=[]
     for i in range(1,n+1,2):
         odds.append(i)
     return odds
 
 def first_odd_numbers(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     first_odds=[]
     for i in range(0,n):
         first_odds.append(i*2+1)
     return first_odds
 
 def even_numbers_up_to(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     odds=[]
     for i in range(0,n,2):
         odds.append(i)
     return odds
 
 def first_even_numbers(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     first_odds=[]
     for i in range(0,n):
         first_odds.append(i*2)
     return first_odds
 
 def perfect_squares_up_to(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     perfect_squares=[]
     last=int(math.sqrt(n))
     for i in range (last+1):
@@ -47,12 +58,16 @@ def perfect_squares_up_to(n):
     return perfect_squares
 
 def first_perfect_square_numbers(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     first_perfect_sqrt_numbers=[]
     for i in range(n):
         first_perfect_sqrt_numbers.append(i*i)
     return first_perfect_sqrt_numbers
 
 def perfect_cubes_up_to(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     perfect_cubes=[]
     last=int(math.cbrt(n))
     for i in range (last+1):
@@ -60,12 +75,16 @@ def perfect_cubes_up_to(n):
     return perfect_cubes
 
 def first_perfect_cube_numbers(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     first_perf_cube_numbers=[]
     for i in range(n):
         first_perf_cube_numbers.append(i**3)
     return first_perf_cube_numbers
 
 def triangular_numbers_up_to(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     triang_numbers=[]
     ok=1
     start=1
@@ -79,12 +98,16 @@ def triangular_numbers_up_to(n):
     return triang_numbers
 
 def first_triangular_numbers(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     first_triang_numbers=[]
     for i in range(1, n+1):
         first_triang_numbers.append(int(i*(i+1)/2))
     return first_triang_numbers
 
 def tetrahedral_numbers_up_to(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     tetr_numbers=[]
     ok=1
     start=1
@@ -98,6 +121,8 @@ def tetrahedral_numbers_up_to(n):
     return tetr_numbers
 
 def first_tetrahedral_numbers(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     first_tetr_numbers=[]
     for i in range(1,n+1):
         first_tetr_numbers.append(int(i*(i+1)*(i+2)/6))
@@ -119,7 +144,7 @@ def isPrime(n):
 
 def prime_numbers_up_to(n):
     if n<0:
-        raise "the number must be positive"
+        raise ValueError("the number must be positive")
     prime_numbers=[]
     for i in range(1,n+1):
         if isPrime(i):
@@ -127,6 +152,8 @@ def prime_numbers_up_to(n):
     return prime_numbers
 
 def first_prime_numbers(n):
+    if n<0:
+        raise ValueError("the number must be positive")
     first_prime_nbrs=[]
     contor=1
     start=2
