@@ -518,3 +518,51 @@ def first_hamming_numbers(n):
         if next_val == hamming_nbrs[i5]*5:
             i5 += 1
     return hamming_nbrs
+
+def mersenne_numbers_up_to(n):
+    """Returnează toate numerele Mersenne mai mici sau egale cu n."""
+    if n < 1:
+        raise ValueError("Numărul trebuie să fie cel puțin 1")
+
+    def is_prime(p):
+        if p < 2:
+            return False
+        for i in range(2, int(p**0.5) + 1):
+            if p % i == 0:
+                return False
+        return True
+
+    mersenne_nbrs = []
+    p = 2
+    while True:
+        m = 2**p - 1
+        if m > n:
+            break
+        if is_prime(p):
+            mersenne_nbrs.append(m)
+        p += 1
+
+    return mersenne_nbrs
+
+
+def first_mersenne_numbers(count):
+    """Returnează primele 'count' numere Mersenne."""
+    if count < 1:
+        raise ValueError("Count trebuie să fie cel puțin 1")
+
+    def is_prime(p):
+        if p < 2:
+            return False
+        for i in range(2, int(p**0.5) + 1):
+            if p % i == 0:
+                return False
+        return True
+
+    mersenne_nbrs = []
+    p = 2
+    while len(mersenne_nbrs) < count:
+        if is_prime(p):
+            mersenne_nbrs.append(2**p - 1)
+        p += 1
+
+    return mersenne_nbrs
