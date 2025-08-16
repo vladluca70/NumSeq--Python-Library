@@ -141,6 +141,78 @@ triangular_numbers_up_to(15)  # returns [1, 3, 6, 10, 15]
 first_triangular_numbers(5)  # returns [1, 3, 6, 10, 15]
 ```
 
+### 13. `tetrahedral_numbers_up_to(n)` 🔷  
+- **Description:** Returns all tetrahedral numbers less than or equal to `n`.  
+- **Formula:** `Te_k = k * (k + 1) * (k + 2) / 6`, where `Te_k` is the k-th tetrahedral number.  
+- **Parameter:**  
+  - `n` (int) – the upper limit for generating tetrahedral numbers. Must be a positive number.  
+- **Returns:**  
+  - List of tetrahedral numbers `[1, 4, 10, 20, ..., ≤ n]`.  
+- **Example:**  
+```python
+tetrahedral_numbers_up_to(20)  # returns [1, 4, 10, 20]
+```
+
+### 14. `first_tetrahedral_numbers(n)` 🔹  
+- **Description:** Returns the first `n` tetrahedral numbers starting from 1.  
+- **Formula:** `Te_k = k * (k + 1) * (k + 2) / 6`  
+- **Parameter:**  
+  - `n` (int) – the number of tetrahedral numbers to generate. Must be a positive number.  
+- **Returns:**  
+  - List of the first `n` tetrahedral numbers `[1, 4, 10, 20, ..., Te_n]`.  
+- **Example:**  
+```python
+first_tetrahedral_numbers(5)  # returns [1, 4, 10, 20, 35]
+```
+
+### 15. `prime_numbers_up_to(n)` 🥇  
+- **Description:** Returns all prime numbers less than or equal to `n`.  
+- **Parameter:**  
+  - `n` (int) – the upper limit for generating prime numbers. Must be a positive number.  
+- **Returns:**  
+  - List of prime numbers `[2, 3, 5, 7, ..., ≤ n]`.  
+- **Example:**  
+```python
+prime_numbers_up_to(10)  # returns [2, 3, 5, 7]
+```
+
+### 16. `first_prime_numbers(n)` 🔢  
+- **Description:** Returns the first `n` prime numbers starting from 2.  
+- **Parameter:**  
+  - `n` (int) – the number of prime numbers to generate. Must be a positive number.  
+- **Returns:**  
+  - List of the first `n` prime numbers `[2, 3, 5, 7, ..., P_n]`.  
+- **Example:**  
+```python
+first_prime_numbers(5)  # returns [2, 3, 5, 7, 11]
+```
+
+### 17. `fibonacci_numbers_up_to(n)` 🌊  
+- **Description:** Returns all Fibonacci numbers less than or equal to `n`.  
+- **Parameter:**  
+  - `n` (int) – the upper limit for generating Fibonacci numbers. Must be a positive number.  
+- **Returns:**  
+  - List of Fibonacci numbers `[0, 1, 1, 2, 3, 5, 8, ..., ≤ n]`.  
+- **Formula:**  
+  - \( F_0 = 0, \; F_1 = 1, \; F_n = F_{n-1} + F_{n-2} \text{ for } n \ge 2 \)  
+- **Example:**  
+```python
+fibonacci_numbers_up_to(10)  # returns [0, 1, 1, 2, 3, 5, 8]
+```
+
+### 18. `first_fibonacci_numbers(n)` 🔢  
+- **Description:** Returns the first `n` Fibonacci numbers.  
+- **Parameter:**  
+  - `n` (int) – the number of Fibonacci numbers to generate. Must be greater than 1.  
+- **Returns:**  
+  - List of the first `n` Fibonacci numbers `[0, 1, 1, 2, 3, 5, ...]`.  
+- **Formula:**  
+  - \( F_0 = 0, \; F_1 = 1, \; F_n = F_{n-1} + F_{n-2} \text{ for } n \ge 2 \)  
+- **Example:**  
+```python
+first_fibonacci_numbers(7)  # returns [0, 1, 1, 2, 3, 5, 8]
+```
+
 ---
 
 Enjoy generating number sequences with **NumSeq**! 🎉  
