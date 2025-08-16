@@ -179,8 +179,30 @@ def fibonacci_numbers_up_to(n):
 def first_fibonacci_numbers(n):
     if n < 2:
         raise ValueError("the number must be greater than 1")
-    fib_numbers = [0, 1]
+    first_fib_numbers = [0, 1]
     for _ in range(n - 2):
-        next_fib = fib_numbers[-1] + fib_numbers[-2]
-        fib_numbers.append(next_fib)
-    return fib_numbers
+        next_fib = first_fib_numbers[-1] + first_fib_numbers[-2]
+        first_fib_numbers.append(next_fib)
+    return first_fib_numbers
+
+def lucas_numbers_up_to(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    lucas_numbers = [2, 1]
+    while True:
+        next_fib = lucas_numbers[-1] + lucas_numbers[-2]
+        if next_fib > n:
+            break
+        lucas_numbers.append(next_fib)
+    return lucas_numbers
+
+
+def first_lucas_numbers(n):
+    if n < 2:
+        raise ValueError("the number must be greater than 1")
+    first_lucas_numbers = [2, 1]
+    for _ in range(n - 2):
+        next_fib = first_lucas_numbers[-1] + first_lucas_numbers[-2]
+        first_lucas_numbers.append(next_fib)
+    return first_lucas_numbers
+
