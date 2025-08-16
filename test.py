@@ -46,3 +46,5 @@ from numseq import *
 
 print(fermat_numbers_up_to(70000))
 print(first_fermat_numbers(3))
+print(pell_numbers_up_to(200))
+print(first_pell_numbers(5))

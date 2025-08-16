@@ -592,3 +592,27 @@ def first_fermat_numbers(count):
         k += 1
 
     return fermat_nbrs
+
+def pell_numbers_up_to(n):
+    if n < 0:
+        raise ValueError("Numărul trebuie să fie cel puțin 0")
+
+    pell_nbrs = [0, 1]
+    while True:
+        next_pell = 2 * pell_nbrs[-1] + pell_nbrs[-2]
+        if next_pell > n:
+            break
+        pell_nbrs.append(next_pell)
+
+    return [num for num in pell_nbrs if num <= n]
+
+
+def first_pell_numbers(count):
+    if count < 1:
+        raise ValueError("Count trebuie să fie cel puțin 1")
+
+    pell_nbrs = [0, 1]
+    while len(pell_nbrs) < count:
+        pell_nbrs.append(2 * pell_nbrs[-1] + pell_nbrs[-2])
+
+    return pell_nbrs[:count]
