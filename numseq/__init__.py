@@ -18,3 +18,5 @@ from  .core import fibonacci_numbers_up_to
 from  .core import first_fibonacci_numbers
 from .core import lucas_numbers_up_to
 from .core import first_lucas_numbers
+from .core import catalan_numbers_up_to
+from  .core import first_catalan_numbers

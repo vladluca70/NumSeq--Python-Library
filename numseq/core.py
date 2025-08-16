@@ -206,3 +206,26 @@ def first_lucas_numbers(n):
         first_lucas_numbers.append(next_fib)
     return first_lucas_numbers
 
+
+def catalan_numbers_up_to(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    catalan_numbers=[]
+    start=0
+    while True:
+        C=int((math.factorial(2*start)) / (math.factorial(start+1)*math.factorial(start)))
+        if C<=n:
+            catalan_numbers.append(C)
+            start+=1
+        else:
+            break
+    return catalan_numbers
+
+def first_catalan_numbers(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    first_catalan_nbrs=[]
+    for i in range(0,n):
+        C=int((math.factorial(2*i)) / (math.factorial(i+1)*math.factorial(i)))
+        first_catalan_nbrs.append(C)
+    return first_catalan_nbrs
