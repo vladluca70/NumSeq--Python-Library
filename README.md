@@ -288,6 +288,34 @@ $$
 first_catalan_numbers(7)  # returns [1, 1, 2, 5, 14, 42, 132]
 ```
 
+### 23. `factorial_numbers_up_to(n)`  🔢  
+- **Description:** Returns all factorial numbers less than or equal to `n`.  
+- **Parameter:**  
+  - `n` (int) – the maximum value up to which factorial numbers are generated. Must be a positive number.  
+- **Returns:**  
+  - List of factorial numbers `[1, 2, 6, 24, ...]` that are less than or equal to `n`.  
+- **Example:**  
+```python
+factorial_numbers_up_to(30)  # returns [1, 2, 6, 24]
+```
+
+### 24. `first_factorial_numbers(n)` 🔢  
+- **Description:** Returns the first `n` factorial numbers.  
+- **Parameter:**  
+  - `n` (int) – the number of factorial numbers to generate. Must be a positive number.  
+- **Returns:**  
+  - List of the first `n` factorial numbers `[1, 1, 2, 6, 24, ...]`.  
+- **Factorial numbers formula:**  
+
+$$
+n! = 1 \cdot 2 \cdot 3 \cdot \dots \cdot n, \quad n \ge 0
+$$
+
+- **Example:**  
+```python
+first_factorial_numbers(7)  # returns [1, 1, 2, 6, 24, 120, 720]
+```
+
 ---
 
 Enjoy generating number sequences with **NumSeq**! 🎉  
