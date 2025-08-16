@@ -440,3 +440,16 @@ def first_perfect_numbers(n):
             perfect_nbrs.append(num)
         num += 1
     return perfect_nbrs
+
+def collatz_sequence(n):
+    if n <= 0:
+        raise ValueError("the number must be a positive integer")
+
+    seq = [n]
+    while n != 1:
+        if n % 2 == 0:
+            n = n // 2
+        else:
+            n = 3 * n + 1
+        seq.append(n)
+    return seq
