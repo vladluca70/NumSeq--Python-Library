@@ -480,3 +480,41 @@ def first_harshad_numbers(n):
         num += 1
     return harshad_nbrs
 
+def hamming_numbers_up_to(n):
+    if n < 1:
+        raise ValueError("the number must be positive and greater than 0")
+
+    hamming_nbrs = [1]
+    i2 = i3 = i5 = 0
+
+    while True:
+        next_val = min(hamming_nbrs[i2]*2, hamming_nbrs[i3]*3, hamming_nbrs[i5]*5)
+        if next_val > n:
+            break
+        hamming_nbrs.append(next_val)
+        if next_val == hamming_nbrs[i2]*2:
+            i2 += 1
+        if next_val == hamming_nbrs[i3]*3:
+            i3 += 1
+        if next_val == hamming_nbrs[i5]*5:
+            i5 += 1
+    return hamming_nbrs
+
+
+def first_hamming_numbers(n):
+    if n < 1:
+        raise ValueError("the number must be positive and greater than 0")
+
+    hamming_nbrs = [1]
+    i2 = i3 = i5 = 0
+
+    while len(hamming_nbrs) < n:
+        next_val = min(hamming_nbrs[i2]*2, hamming_nbrs[i3]*3, hamming_nbrs[i5]*5)
+        hamming_nbrs.append(next_val)
+        if next_val == hamming_nbrs[i2]*2:
+            i2 += 1
+        if next_val == hamming_nbrs[i3]*3:
+            i3 += 1
+        if next_val == hamming_nbrs[i5]*5:
+            i5 += 1
+    return hamming_nbrs

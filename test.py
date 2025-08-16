@@ -40,3 +40,5 @@ from numseq import *
 
 print(harshad_numbers_up_to(20))
 print(first_harshad_numbers(5))
+print(hamming_numbers_up_to(20))
+print(first_hamming_numbers(4))
