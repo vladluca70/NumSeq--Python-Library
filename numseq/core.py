@@ -667,6 +667,40 @@ def divide_sequences(seq1, seq2):
         d.append(seq1[i]/seq2[i])
     return d
 
+def modulo_sequences(seq1, seq2):
+    lg1=length_of_sequence(seq1)
+    lg2=length_of_sequence(seq2)
+    if lg1!=lg2:
+        raise ValueError("length of sequences must be the same")
+    m=[]
+    for i in range(lg1):
+        m.append(seq1[i]%seq2[i])
+    return m
+
+def power_sequences(seq1, seq2):
+    lg1=length_of_sequence(seq1)
+    lg2=length_of_sequence(seq2)
+    if lg1!=lg2:
+        raise ValueError("length of sequences must be the same")
+    p=[]
+    for i in range(lg1):
+        p.append(seq1[i]**seq2[i])
+    return p
+
+def absolute_difference_sequences(seq1, seq2):
+    lg1=length_of_sequence(seq1)
+    lg2=length_of_sequence(seq2)
+    if lg1!=lg2:
+        raise ValueError("length of sequences must be the same")
+    ad=[]
+    for i in range(lg1):
+        diff=seq1[i]-seq2[i]
+        if diff>=0:
+            ad.append(diff)
+        else:
+            ad.append(-diff)
+    return ad
+
 def concat_sequences(seq1, seq2):
     return seq1+seq2
 
@@ -718,9 +752,17 @@ def logic_XOR_on_sequences(seq1, seq2):
         _xor.append(seq1[i] != seq2[i])
     return _xor
 
+def sum_elements_of_sequence(seq):
+    return sum(seq)
+
 def max_from_sequence(seq):
     return max(seq)
 
 def min_from_sequence(seq):
     return min(seq)
+
+def arithmetic_mean(seq):
+    lg=length_of_sequence(seq)
+    s=sum_elements_of_sequence(seq)
+    return s/lg
 
