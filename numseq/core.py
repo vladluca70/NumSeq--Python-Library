@@ -355,3 +355,36 @@ def first_motzkin_numbers(n):
     for i in range(2, n):
         motzkin_nbrs.append(motzkin_nbrs[i-1] + sum(motzkin_nbrs[k] * motzkin_nbrs[i-2-k] for k in range(i-1)))
     return motzkin_nbrs
+
+def tribonacci_numbers_up_to(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    if n == 0:
+        raise ValueError("the number must be greater than 0")
+
+    trib_nbrs = [0, 1, 1]  # T(0)=0, T(1)=1, T(2)=1
+    i = 3
+    while True:
+        new_number = trib_nbrs[i-1] + trib_nbrs[i-2] + trib_nbrs[i-3]
+        if new_number <= n:
+            trib_nbrs.append(new_number)
+            i += 1
+        else:
+            break
+    return trib_nbrs
+
+
+def first_tribonacci_numbers(n):
+    if n < 0:
+        raise ValueError("the number must be positive")
+    if n == 0:
+        return []
+    if n == 1:
+        return [0]
+    if n == 2:
+        return [0, 1]
+
+    trib_nbrs = [0, 1, 1]
+    for i in range(3, n):
+        trib_nbrs.append(trib_nbrs[i-1] + trib_nbrs[i-2] + trib_nbrs[i-3])
+    return trib_nbrs

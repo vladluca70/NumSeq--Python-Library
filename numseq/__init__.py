@@ -28,3 +28,5 @@ from .core import perrin_numbers_up_to
 from .core import first_perrin_numbers
 from .core import motzkin_numbers_up_to
 from .core import first_motzkin_numbers
+from .core import tribonacci_numbers_up_to
+from  .core import first_tribonacci_numbers
