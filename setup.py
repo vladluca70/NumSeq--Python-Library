@@ -2,9 +2,9 @@ from setuptools import setup, find_packages
 
 setup(
     name="numseq",
-    version="0.1.0",
+    version="0.1.1",
     packages=find_packages(),
-    install_requires=[],  # aici pui alte librării necesare, dacă există
+    install_requires=[],
     author="Luca Vlad",
     author_email="vladluca70@gmail.com",
     description="Librărie pentru secvențe numerice",

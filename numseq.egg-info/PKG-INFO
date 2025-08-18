@@ -1,6 +1,6 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: numseq
-Version: 0.1.0
+Version: 0.1.1
 Summary: Librărie pentru secvențe numerice
 Home-page: https://github.com/vladluca70/NumSeq--Python-Library
 Author: Luca Vlad
@@ -10,11 +10,39 @@ Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
 
 # NumSeq - Python Library 🧮
 
 **NumSeq** is a Python library that generates well-known number sequences.  
-It provides simple and efficient functions for creating sequences like natural numbers, odd numbers, and other useful numeric sequences for programming or math.
+It provides simple and efficient functions for creating sequences like natural numbers, odd numbers, and many classical mathematical sequences. Some of the sequences you can generate include:
+
+- **Perfect squares** and **perfect cubes**  
+- **Triangular numbers** and **tetrahedral numbers**  
+- **Fibonacci** and **Tribonacci numbers**  
+- **Lucas numbers**  
+- **Catalan numbers**  
+- **Padovan** and **Perrin numbers**  
+- **Motzkin numbers**  
+- **Armstrong numbers**  
+- **Perfect numbers**  
+- **Collatz sequence**  
+- **Harshad numbers**  
+- **Hamming numbers**  
+- **Mersenne** and **Fermat numbers**  
+- **Pell numbers**
+
+Each function is designed to be intuitive, with clear parameters and return values, allowing you to quickly generate sequences for learning, testing, or computational purposes.
+
+
+You can find the library and install it from [PyPI](https://pypi.org/project/numseq/0.1.0/).
 
 ---
 
@@ -754,6 +782,204 @@ $$
 - **Example:**  
 ```python
 first_pell_numbers(6)  # returns [0, 1, 2, 5, 12, 29]
+```
+
+### 48. `add_sequences(seq1, seq2)` ➕  
+- **Description:** Returns a new sequence that is the element-wise sum of two sequences of equal length.  
+- **Parameters:**  
+  - `seq1` (list of numbers) – the first sequence.  
+  - `seq2` (list of numbers) – the second sequence. Must have the same length as `seq1`.  
+- **Returns:**  
+  - List of numbers representing the element-wise sum of `seq1` and `seq2`.  
+- **Raises:**  
+  - `ValueError` if the sequences are not of the same length.  
+- **Example:**  
+```python
+add_sequences([1, 2, 3], [4, 5, 6])  # returns [5, 7, 9]
+```
+
+### 49. `subtract_sequences(seq1, seq2)` ➖  
+- **Description:** Returns a new sequence that is the element-wise difference of two sequences of equal length.  
+- **Parameters:**  
+  - `seq1` (list of numbers) – the first sequence.  
+  - `seq2` (list of numbers) – the second sequence. Must have the same length as `seq1`.  
+- **Returns:**  
+  - List of numbers representing the element-wise difference `seq1[i] - seq2[i]`.  
+- **Raises:**  
+  - `ValueError` if the sequences are not of the same length.  
+- **Example:**  
+```python
+subtract_sequences([5, 7, 9], [1, 2, 3])  # returns [4, 5, 6]
+```
+
+### 50. `multiply_sequences(seq1, seq2)` ✖️  
+- **Description:** Returns a new sequence that is the element-wise product of two sequences of equal length.  
+- **Parameters:**  
+  - `seq1` (list of numbers) – the first sequence.  
+  - `seq2` (list of numbers) – the second sequence. Must have the same length as `seq1`.  
+- **Returns:**  
+  - List of numbers representing the element-wise product `seq1[i] * seq2[i]`.  
+- **Raises:**  
+  - `ValueError` if the sequences are not of the same length.  
+- **Example:**  
+```python
+multiply_sequences([1, 2, 3], [4, 5, 6])  # returns [4, 10, 18]
+```
+
+### 51. `divide_sequences(seq1, seq2)` ➗  
+- **Description:** Returns a new sequence that is the element-wise division of two sequences of equal length.  
+- **Parameters:**  
+  - `seq1` (list of numbers) – the numerator sequence.  
+  - `seq2` (list of numbers) – the denominator sequence. Must have the same length as `seq1`.  
+- **Returns:**  
+  - List of numbers representing the element-wise division `seq1[i] / seq2[i]`.  
+- **Raises:**  
+  - `ValueError` if the sequences are not of the same length.  
+  - `ZeroDivisionError` if any element in `seq2` is zero.  
+- **Example:**  
+```python
+divide_sequences([4, 10, 18], [2, 5, 3])  # returns [2.0, 2.0, 6.0]
+```
+
+### 52. `modulo_sequences(seq1, seq2)` 🟰  
+- **Description:** Returns a new sequence that is the element-wise modulo of two sequences of equal length.  
+- **Parameters:**  
+  - `seq1` (list of numbers) – the dividend sequence.  
+  - `seq2` (list of numbers) – the divisor sequence. Must have the same length as `seq1`.  
+- **Returns:**  
+  - List of numbers representing the element-wise modulo `seq1[i] % seq2[i]`.  
+- **Raises:**  
+  - `ValueError` if the sequences are not of the same length.  
+  - `ZeroDivisionError` if any element in `seq2` is zero.  
+- **Example:**  
+```python
+modulo_sequences([5, 7, 10], [2, 3, 4])  # returns [1, 1, 2]
+```
+
+### 53. `power_sequences(seq1, seq2)` 🔺  
+- **Description:** Returns a new sequence that is the element-wise exponentiation of two sequences of equal length.  
+- **Parameters:**  
+  - `seq1` (list of numbers) – the base sequence.  
+  - `seq2` (list of numbers) – the exponent sequence. Must have the same length as `seq1`.  
+- **Returns:**  
+  - List of numbers representing the element-wise power `seq1[i] ** seq2[i]`.  
+- **Raises:**  
+  - `ValueError` if the sequences are not of the same length.  
+- **Example:**  
+```python
+power_sequences([2, 3, 4], [3, 2, 1])  # returns [8, 9, 4]
+```
+
+### 54. `absolute_difference_sequences(seq1, seq2)` 🔹  
+- **Description:** Returns a new sequence containing the element-wise absolute differences between two sequences of equal length.  
+- **Parameters:**  
+  - `seq1` (list of numbers) – the first sequence.  
+  - `seq2` (list of numbers) – the second sequence. Must have the same length as `seq1`.  
+- **Returns:**  
+  - List of numbers representing the absolute differences `|seq1[i] - seq2[i]|`.  
+- **Raises:**  
+  - `ValueError` if the sequences are not of the same length.  
+- **Example:**  
+```python
+absolute_difference_sequences([5, 7, 2], [3, 10, 2])  # returns [2, 3, 0]
+```
+
+### 55. `concat_sequences(seq1, seq2)` 🔗  
+- **Description:** Returns a new sequence by concatenating two sequences end-to-end.  
+- **Parameters:**  
+  - `seq1` (list) – the first sequence.  
+  - `seq2` (list) – the second sequence.  
+- **Returns:**  
+  - List containing all elements of `seq1` followed by all elements of `seq2`.  
+- **Example:**  
+```python
+concat_sequences([1, 2, 3], [4, 5, 6])  # returns [1, 2, 3, 4, 5, 6]
+```
+
+### 56. `logic_AND_on_sequences(seq1, seq2)` 🔒  
+- **Description:** Returns a new sequence containing the element-wise logical AND of two boolean sequences of equal length.  
+- **Parameters:**  
+  - `seq1` (list of 0 or 1) – the first boolean sequence.  
+  - `seq2` (list of 0 or 1) – the second boolean sequence. Must have the same length as `seq1`.  
+- **Returns:**  
+  - List of numbers representing the logical AND of corresponding elements `seq1[i] and seq2[i]`.  
+- **Raises:**  
+  - `ValueError` if the sequences are not of the same length or contain non-boolean values.  
+- **Example:**  
+```python
+logic_AND_on_sequences([1, 0, 1], [0, 1, 1])  # returns [0, 0, 1]
+```
+
+### 57. `logic_OR_on_sequences(seq1, seq2)` 🔓  
+- **Description:** Returns a new sequence containing the element-wise logical OR of two boolean sequences of equal length.  
+- **Parameters:**  
+  - `seq1` (list of 0 or 1) – the first boolean sequence.  
+  - `seq2` (list of 0 or 1) – the second boolean sequence. Must have the same length as `seq1`.  
+- **Returns:**  
+  - List of numbers representing the logical OR of corresponding elements `seq1[i] or seq2[i]`.  
+- **Raises:**  
+  - `ValueError` if the sequences are not of the same length or contain non-boolean values.  
+- **Example:**  
+```python
+logic_OR_on_sequences([1, 0, 1], [0, 1, 1])  # returns [1, 1, 1]
+```
+
+### 58. `logic_XOR_on_sequences(seq1, seq2)` ✖️  
+- **Description:** Returns a new sequence containing the element-wise logical XOR of two boolean sequences of equal length.  
+- **Parameters:**  
+  - `seq1` (list of 0 or 1) – the first boolean sequence.  
+  - `seq2` (list of 0 or 1) – the second boolean sequence. Must have the same length as `seq1`.  
+- **Returns:**  
+  - List of numbers representing the logical XOR of corresponding elements `seq1[i] != seq2[i]`.  
+- **Raises:**  
+  - `ValueError` if the sequences are not of the same length or contain non-boolean values.  
+- **Example:**  
+```python
+logic_XOR_on_sequences([1, 0, 1], [0, 1, 1])  # returns [1, 1, 0]
+```
+
+### 59. `sum_elements_of_sequence(seq)` ➕  
+- **Description:** Returns the sum of all elements in a sequence.  
+- **Parameter:**  
+  - `seq` (list of numbers) – the sequence to sum.  
+- **Returns:**  
+  - Sum of all elements in the sequence.  
+- **Example:**  
+```python
+sum_elements_of_sequence([1, 2, 3, 4])  # returns 10
+```
+
+### 60. `max_from_sequence(seq)` 📈  
+- **Description:** Returns the maximum value from a sequence.  
+- **Parameter:**  
+  - `seq` (list of numbers) – the sequence to evaluate.  
+- **Returns:**  
+  - The largest number in the sequence.  
+- **Example:**  
+```python
+max_from_sequence([1, 2, 3, 4])  # returns 4
+```
+
+### 61. `min_from_sequence(seq)` 📉  
+- **Description:** Returns the minimum value from a sequence.  
+- **Parameter:**  
+  - `seq` (list of numbers) – the sequence to evaluate.  
+- **Returns:**  
+  - The smallest number in the sequence.  
+- **Example:**  
+```python
+min_from_sequence([1, 2, 3, 4])  # returns 1
+```
+
+### 62. `arithmetic_mean(seq)` ➗  
+- **Description:** Returns the arithmetic mean (average) of the elements in a sequence.  
+- **Parameter:**  
+  - `seq` (list of numbers) – the sequence to evaluate. Must contain at least one element.  
+- **Returns:**  
+  - The arithmetic mean of the sequence.  
+- **Example:**  
+```python
+arithmetic_mean([2, 4, 6, 8])  # returns 5.0
 ```
 
 ---
