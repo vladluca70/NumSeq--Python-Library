@@ -21,7 +21,7 @@ It provides simple and efficient functions for creating sequences like natural n
 Each function is designed to be intuitive, with clear parameters and return values, allowing you to quickly generate sequences for learning, testing, or computational purposes.
 
 
-You can find the library and install it from [PyPI](https://pypi.org/project/numseq/0.1.0/).
+You can find the library and install it from [PyPI](https://pypi.org/project/numseq/0.1.1/).
 
 ---
 
